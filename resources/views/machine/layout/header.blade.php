@@ -170,7 +170,7 @@ align-items: center;    }
         <!--End Preloader -->
 
         <!--Start Top bar area -->
-        <section class="top-bar-area">
+        <section class="top-bar-area" style="background-color:#a38c6be0;">
             <div class="container">
                 <div class="clearfix"style="height:35px;">
                     <div class="pull-left">
@@ -240,7 +240,7 @@ align-items: center;    }
         <!--Start mainmenu area-->
         <section class="mainmenu-area stricky">
             <div class="container">
-                <div class="mainmenu-bg">
+                <div class="mainmenu-bg" style="background-color:#ff8100;">
                     <div class="row">
                         <div class="col-md-9 col-sm-12 col-xs-12">
                             <!--Start mainmenu-->
@@ -270,7 +270,13 @@ Services</a>
                                         <li><a href="single-service.html">single service</a></li>
                                     </ul> -->
                                         </li>
-
+                                        <li class="dropdown">                        <a href="{{ url('gallery') }}">
+Gallery</a>
+                                            <!-- <ul>
+                                        <li><a href="service.html">service</a></li>
+                                        <li><a href="single-service.html">single service</a></li>
+                                    </ul> -->
+                                        </li>
                                         <li class="dropdown">                        <a href="{{ url('/blog') }}">
 Blogs</a>
                                             <!-- <ul>
@@ -298,7 +304,7 @@ Blogs</a>
 
                                         </li>
                                         <li class="dropdown"><a href="{{ url('/service') }}">Services</a>
-
+                                        <li class="dropdown"><a href="{{ url('/gallery') }}">Gallery</a>
                                         </li>
 
                                         <li class="dropdown"><a href="{{ url('/blog') }}">Blogs</a>
@@ -330,7 +336,8 @@ Blogs</a>
 
                             </div>
                             <div class="link_btn float_right">
-                                <a href="" class="thm-btn bg-clr1" id="up">Call Us</a>
+                                <a style="background-color:rgb(255 81 14);
+"href="" class="thm-btn bg-clr1" id="up">Call Us</a>
                             </div>
                         </div>
 

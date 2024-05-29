@@ -168,6 +168,7 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
  Route::get('/', [MachineController::class, 'index']);
  Route::get('/about', [MachineController::class, 'about']);
  Route::get('/service', [MachineController::class, 'service']);
+ Route::get('/gallery', [MachineController::class, 'gallery']);
  Route::get('/getservice', [MachineController::class, 'getservice'])->name('getservice');
 
  Route::get('/blog', [MachineController::class, 'blog']);
@@ -176,18 +177,25 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
  Route::get('admin', [AuthController::class, 'login']);
  Route::post('admin', [AuthController::class, 'auth_login_admin']);
  Route::get('admin/logout', [AuthController::class, 'logout_admin']);
- Route::get('/header', [MachineController::class, 'get_logo1']);
+ Route::get('/header', [MachineController::class, 'get_logo1'])->name('header');
  Route::post('/contact', [MachineController::class, 'store'])->name('contact.store');
- Route::get('/profile', [MachineController::class, 'get_profile']);
- Route::get('/service1', [MachineController::class, 'get_service']);
+ Route::get('/profile', [MachineController::class, 'get_profile'])->name('profile');
+ Route::get('/service1', [MachineController::class, 'get_service'])->name('service1');
  Route::get('/singleblog/{id}/{slug}', [MachineController::class, 'get_blog']);
- Route::get('/allget', [MachineController::class, 'get_all']);
+ Route::get('/allget', [MachineController::class, 'get_all'])->name('allget');
  Route::get('/singleblog/{id}', [MachineController::class, 'get_single_blog']);
  Route::get('sitemap.xml', [SitemapController::class, 'index']);
 
 
 
     Route::middleware('auth')->group(function () {
+        //gallery
+        Route::get('admin/gallery3/list3', [MachineController1::class, 'gallery_list3'])->name('gallery-list3');
+        Route::post('admin/gallery2/add', [MachineController1::class, 'gallery_add'])->name('add-gallery');
+        Route::post('admin/gallery/update/{id}', [MachineController1::class, 'gallery_update'])->name('updategallery');
+        Route::get('admin/gallery/edit/{id}', [MachineController1::class, 'galleryedit']);
+         Route::get('admin/gallery/delete/{id}', [MachineController1::class,'gallerydelete']);
+
             // service
     Route::get('admin/service1/list', [MachineController1::class, 'client_list'])->name('ser-list');
     Route::post('admin/service1/add', [MachineController1::class, 'client_add'])->name('add-client');

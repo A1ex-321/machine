@@ -145,7 +145,12 @@
       <a href="{{ route('blogsco-list') }}" class="nav-link {{ request()->is('admin/blogseo/*') ? '' : 'collapsed' }}">
         <i class="bi bi-layout-text-window-reverse" aria-hidden="true"></i><span> Blog</span>
       </a>
-    </li><!-- End Tables Nav -->
+    </li>
+    <li class="nav-item">
+      <a href="{{route('gallery-list3')}}" class="nav-link {{ request()->segment(2) === 'list3' ? '' : 'collapsed' }}">
+        <i class="bi bi-person"></i><span>Gallery</span>
+      </a>
+    </li>
     <li class="nav-item">
       <a href="{{ route('detail-list') }}" class="nav-link {{ request()->is('admin/detail/*') ? '' : 'collapsed' }}">
         <i class="bi bi-ticket-detailed-fill" aria-hidden="true"></i><span> Details</span>

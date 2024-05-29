@@ -54,7 +54,7 @@
 </style>
 
 <!--Start breadcrumb area-->
-<section class="breadcrumb-area" style="background-image: url('{{ asset('public/machine/images/banner2.png') }}');">
+<section class="breadcrumb-area" style="background-color:rgb(233 182 116 / 62%);height:140px!important;">
     <div class="container text-center">
         <h1>Our service</h1>
     </div>

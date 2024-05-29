@@ -126,9 +126,9 @@ input,textarea {font-family: 'Hind', sans-serif;display: block; font-size: 16px;
   padding: 80px 0 30px;
 }
 
-.sec-padd-top {
+/* .sec-padd-top {
   padding-top: 80px;
-}
+} */
 .sec-padd-bottom {
   padding-bottom: 80px;
 }

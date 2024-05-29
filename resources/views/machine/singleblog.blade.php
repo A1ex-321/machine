@@ -3,20 +3,17 @@
 @section('content')
 <style>
     /* Define fixed width and height for images within the CKEditor content */
-    #ck1 img {
+     #ck1 img {
+        height: 400px;
         width: 100%;
-        height: 340px;
-        object-fit: cover;
-        /* Maintain aspect ratio */
-    }
+
+    } 
     @media only screen and (max-width: 767px) {
     /* Add your mobile styles here */
     #ck1 img {
         width: 100%;
-        /* Adjust width as needed */
         height: 300px;
         object-fit:cover;
-        /* Maintain aspect ratio */
     }
     #im img
     {
@@ -27,7 +24,7 @@
 
 </style>
 <!--Start breadcrumb area-->
-<section class="breadcrumb-area" style="background-image: url('{{ asset('public/machine/images/dmitriy-demidov-iuuJC_pjLU0-unsplash.jpg') }}');
+<section class="breadcrumb-area" style="background-color:#82a9728c;
 ">
     <div class="container text-center">
         <h1>Blogs</h1>
@@ -43,7 +40,7 @@
                     <div class="single-blog-post">
                     @if(isset($getRecord))
     <div class="img-holder" id="im">
-        <img src="{{ asset('public/images/' . $getRecord->image) }}" style="width:100%;height:380px;object-fit:cover;border-radius:8px;" alt="Awesome Image">
+        <img src="{{ asset('public/images/' . $getRecord->image) }}" style="height:380px;border-radius:8px;" alt="Awesome Image">
     </div>
     <div class="text-holder">
         <h3 class="blog-title">{{ $getRecord->title }}</h3>

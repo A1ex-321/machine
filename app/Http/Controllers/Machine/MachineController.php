@@ -22,6 +22,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Mailstores;
 use App\Models\Blogsco;
+use App\Models\gallery1;
+
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Cache;
@@ -42,6 +44,8 @@ class MachineController extends Controller
         $data['content'] = Machineservice::where('is_service', 0)->get();
         $data['service'] = Machineservice::where('is_service', 1)->select('machinetitle', 'machineimage', 'description')->get();
         $data['link'] = Scolink::get();
+        $data['gallery'] = gallery1::get();
+
         // dd($data['link']);
 
 
@@ -75,7 +79,14 @@ class MachineController extends Controller
     
         return view('machine.service', $data);
     }
+    public function gallery()
+    {
 
+         $data['gallery'] = gallery1::get();
+        $data['link'] = Scolink::get();
+    
+        return view('machine.gallery',$data);
+    }
     public function blog()
     {
         // Check if the cache key exists
